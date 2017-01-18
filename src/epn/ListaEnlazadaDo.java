@@ -23,14 +23,12 @@ public class ListaEnlazadaDo {
 	
 	public void insertarInicio(String elem){
 		Nodo actual= new Nodo(elem);
-		if(vacio()){
-			actual.setSiguiente(cabeza);
-		}
-		else{
-			actual.setSiguiente(cabeza);
-			//cabeza.setAnterior(actual);
+		actual.setSiguiente(cabeza);
+		
+		if(vacio()!=false){
 			cabeza=actual;
-		}
+			cabeza.setAnterior(actual);
+			}
 	}
 	
 	public void imprimir(){
